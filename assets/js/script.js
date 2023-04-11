@@ -1,3 +1,6 @@
+//List of Questions and Answers
+console.log("Its alive")
+
 var questions = [
   {
     prompt:
@@ -109,8 +112,10 @@ var questions = [
       "<You can't stop Danny DeVito>",
       "<Jump over him>",
       "<Throw him an oven roasted turkey leg>",
-      "<Yell, STOP as loud as you can",
+      "<Yell, STOP as loud as you can sign language",
     ],
     answer: "<Jump over him>",
   },
 ];
+
+
