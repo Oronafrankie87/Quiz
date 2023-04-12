@@ -285,3 +285,23 @@ function storeHighScores(event) {
 
   showHighScores();
 }
+
+function showHighScores() {
+  startDiv.style.display = "none";
+  timer.style.display = "none";
+  questionDiv.style.display = "none";
+  timesUp.style.display = "none";
+  summary.style.display = "none";
+  highScoreSection.style.display = "block";
+  var savedHighScores = localStorage.getItem("high scores");
+  if (savedHighScores === null) {
+    return;
+  }
+  var storedHighScores = JSON.parse(savedHighScores);
+  for (var index = 0; index < storedHighScores.length; index++) {
+    var eachNewHighScore = document.createElement("p");
+    eachNewHighScore.innerHTML =
+      storedHighScores[index].initials + ": " + storedHighScores[index].score;
+    listOfHighScores.appendChild(eachNewHighScore);
+  }
+}
