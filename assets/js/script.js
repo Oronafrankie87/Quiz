@@ -2,69 +2,137 @@ const questions = [
   {
     question:
       "How much wood would a Woodchuck chuck if a Woodchuck could chuck wood?",
-    choice: ["a. $12.32 worth", "b. About 700 pounds", "c. 8 times the body weigh of a Mexican Jumping Frog from Sri Lanka",
-     "d. Slightly more than 3 branches"],
+    choice: [
+      "a. $12.32 worth",
+      "b. About 700 pounds",
+      "c. 8 times the body weigh of a Mexican Jumping Frog from Sri Lanka",
+      "d. Slightly more than 3 branches",
+    ],
     answer: "b. About 700 pounds",
   },
   {
     question: "What is the correct answer to this question? Guess..",
-    choice: ["a. This one", "b. 4", "c. None of these", "d. Every Other Leap Year"],
+    choice: [
+      "a. This one",
+      "b. 4",
+      "c. None of these",
+      "d. Every Other Leap Year",
+    ],
     answer: "a. This one",
   },
   {
     question: "What is always coming but will never arrive?",
-    choice: ["a. The end of COVID", "b. Your lunch from Grubhub", "c. Tomorrow", "d. The new Beetlejuice movie"],
+    choice: [
+      "a. The end of COVID",
+      "b. Your lunch from Grubhub",
+      "c. Tomorrow",
+      "d. The new Beetlejuice movie",
+    ],
     answer: "c. Tomorrow",
   },
   {
     question:
       "During an Eclipse, is it safe to stare directly at William Defoe?",
-    choice: ["a. Only with protective shades", "b. Yes", "c. As long as you have a burrito in one hand", "d. Its never safe to stare directly at William Defoe"],
+    choice: [
+      "a. Only with protective shades",
+      "b. Yes",
+      "c. As long as you have a burrito in one hand",
+      "d. Its never safe to stare directly at William Defoe",
+    ],
     answer: "d. Its never safe to stare directly at William Defoe",
   },
   {
     question: "What is the main ingredient in a unicorn sandwich?",
-    choice: ["a. A good nights sleep", "b. Butter", "c. Asbestos", "d. Flugengroggle extract"],
+    choice: [
+      "a. A good nights sleep",
+      "b. Butter",
+      "c. Asbestos",
+      "d. Flugengroggle extract",
+    ],
     answer: "b. Butter",
   },
   {
     question: "Two of the hardest words to say are sorry and...?",
-    choice: ["a. Worcestershire sauce", "b. Bamboozled", "c. Hippopotomonstrosesquippedaliophobia", "d. Rural"],
+    choice: [
+      "a. Worcestershire sauce",
+      "b. Bamboozled",
+      "c. Hippopotomonstrosesquippedaliophobia",
+      "d. Rural",
+    ],
     answer: "a. Worcestershire sauce",
   },
   {
     question: "What are you actually doing when you wash your hands?",
-    choice: ["a. Break dancing", "b. Cleaning your top feet", "c. Supervising your hands while they commit bacterial genocide.", "d. Making Soap disappear"],
-    answer: "c. Supervising your hands while they commit bacterial genocide."
+    choice: [
+      "a. Break dancing",
+      "b. Cleaning your top feet",
+      "c. Supervising your hands while they commit bacterial genocide.",
+      "d. Making Soap disappear",
+    ],
+    answer: "c. Supervising your hands while they commit bacterial genocide.",
   },
   {
     question: "When doing the Hokey Pokey, what is it all about?",
-    choice: ["a. Playing leapfrog with a stranger in a Taco Bell parking lot.", "b. Lolly Gaging", "c. Putting your right hand in, then out, then shaking it all about.", "d. Playing Amazing Graze with your nose."],
-    answer: "c Putting your right hand in, then out, then shaking it all about.",
+    choice: [
+      "a. Playing leapfrog with a stranger in a Taco Bell parking lot.",
+      "b. Lolly Gaging",
+      "c. Putting your right hand in, then out, then shaking it all about.",
+      "d. Playing Amazing Graze with your nose.",
+    ],
+    answer:
+      "c Putting your right hand in, then out, then shaking it all about.",
   },
   {
     question: "Whats the difference between a Crocodile and an Alligator?",
-    choice: ["a. One sees you later and the other sees you after a while", "b. All Crocodiles are born Crocodiles but Alligators are born lizards and turn into Alligators when they turn 15 years old", "c. If you split an Alligator in half it becomes a Partigator, when you split a Crocodile in half it just dies.", "d. One starts with C and the other starts with A"],
+    choice: [
+      "a. One sees you later and the other sees you after a while",
+      "b. All Crocodiles are born Crocodiles but Alligators are born lizards and turn into Alligators when they turn 15 years old",
+      "c. If you split an Alligator in half it becomes a Partigator, when you split a Crocodile in half it just dies.",
+      "d. One starts with C and the other starts with A",
+    ],
     answer: "a. One sees you later and the other sees you after a while",
   },
   {
     question: "The singer Meatloaf would do anything for love, except?",
-    choice: ["a. Carry on his Wayward son", "b. This", "c. That", "d. File his taxes early"],
+    choice: [
+      "a. Carry on his Wayward son",
+      "b. This",
+      "c. That",
+      "d. File his taxes early",
+    ],
     answer: "c. That",
   },
   {
-    question: "What is the most effective way to stop a fully grown Danny DeVito from charging and headbutting you?",
-    choice: ["a. You can't stop Danny DeVito", "b. Jump over him", "c. Throw him an oven roasted turkey leg", "d. Yell, STOP as loud as you can sign language"],
+    question:
+      "What is the most effective way to stop a fully grown Danny DeVito from charging and headbutting you?",
+    choice: [
+      "a. You can't stop Danny DeVito",
+      "b. Jump over him",
+      "c. Throw him an oven roasted turkey leg",
+      "d. Yell, STOP as loud as you can sign language",
+    ],
     answer: "b. Jump over him",
   },
   {
-    question: "What is the American Dental Association's recommended way of entering a Chipotle?",
-    choice: ["a. Through the doggie door", "b. Wrapping yourself in bubble wrap and jumping through the window", "c. Hide inside a bag of rice then jump out before they open it", "d. 'Kramer' in"],
+    question:
+      "What is the American Dental Association's recommended way of entering a Chipotle?",
+    choice: [
+      "a. Through the doggie door",
+      "b. Wrapping yourself in bubble wrap and jumping through the window",
+      "c. Hide inside a bag of rice then jump out before they open it",
+      "d. 'Kramer' in",
+    ],
     answer: "d. 'Kramer' in",
   },
   {
-    question: "Barry Gibb, the oldest and only living member of the great singing group the Bee Gees is very good at?",
-    choice: ["a. Jive Talkin'", "b. Getting that night fever", "c. Stayin' Alive", "d. Mending a broken heart"],
+    question:
+      "Barry Gibb, the oldest and only living member of the great singing group the Bee Gees is very good at?",
+    choice: [
+      "a. Jive Talkin'",
+      "b. Getting that night fever",
+      "c. Stayin' Alive",
+      "d. Mending a broken heart",
+    ],
     answer: "c. Stayin' Alive",
   },
 ];
@@ -93,7 +161,6 @@ var clearHighScoreBtn = document.getElementById("clearHighScoreBtn");
 var viewHighScore = document.getElementById("viewHighScore");
 var listOfHighScores = document.getElementById("listOfHighScores");
 
-
 // Other variables defined
 var correctAns = 0;
 var questionNum = 0;
@@ -102,27 +169,27 @@ var questionIndex = 0;
 var timeLeft = 151;
 
 function newQuiz() {
-    questionIndex = 0;
-    timeLeft = 150;
-    timeLeft.textContent = timeLeft;
-    initialInput.textContent = "";
-    startDiv.style.display = "none";
-    questionDiv.style.display = "block";
-    timer.style.display = "block";
-    timesUp.style.display = "none";
+  questionIndex = 0;
+  timeLeft = 150;
+  timeLeft.textContent = timeLeft;
+  initialInput.textContent = "";
+  startDiv.style.display = "none";
+  questionDiv.style.display = "block";
+  timer.style.display = "block";
+  timesUp.style.display = "none";
 
-    var startTimer = setInterval(function() {
-        timeLeft--;
-        timeLeft.textContent = timeLeft;
-        if(timeLeft <= 0) {
-            clearInterval(startTimer);
-            if (questionIndex < questions.length - 1) {
-                gameOver();
-            }
-        }
-    },1000);
-    showQuiz();
-};
+  var startTimer = setInterval(function () {
+    timeLeft--;
+    timeLeft.textContent = timeLeft;
+    if (timeLeft <= 0) {
+      clearInterval(startTimer);
+      if (questionIndex < questions.length - 1) {
+        gameOver();
+      }
+    }
+  }, 1000);
+  showQuiz();
+}
 
 function showQuiz() {
   nextQuestion();
@@ -182,4 +249,39 @@ function gameOver() {
   timer.style.display = "none";
   timesUp.style.display = "block";
   finalScore.textContent = correctAns;
+}
+
+function storeHighScores(event) {
+  event.preventDefault();
+
+  if (initialInput.value === "") {
+    alert("Please enter your initials!");
+    return;
+  }
+
+  startDiv.style.display = "none";
+  timer.style.display = "none";
+  timesUp.style.display = "none";
+  summary.style.display = "none";
+  highScoreSection.style.display = "block";
+
+  var savedHighScores = localStorage.getItem("high scores");
+  var scoresArray;
+
+  if (savedHighScores === null) {
+    scoresArray = [];
+  } else {
+    scoresArray = JSON.parse(savedHighScores);
+  }
+
+  var userScore = {
+    initials: initialInput.value,
+    score: finalScore.textContent,
+  };
+
+  scoresArray.push(userScore);
+  var scoresArrayString = JSON.stringify(scoresArray);
+  window.localStorage.setItem("high scores", scoresArrayString);
+
+  showHighScores();
 }
