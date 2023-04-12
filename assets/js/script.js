@@ -168,6 +168,21 @@ var scoreResult;
 var questionIndex = 0;
 var timeLeft = 151;
 
+startQuizBtn.addEventListener("click", newQuiz);
+
+submitInitialBtn.addEventListener("click", function (event) {
+  storeHighScores(event);
+});
+
+viewHighScore.addEventListener("click", function (event) {
+  showHighScores(event);
+});
+
+goBackBtn.addEventListener("click", function () {
+  startDiv.style.display = "block";
+  highScoreSection.style.display = "none";
+});
+
 function newQuiz() {
   questionIndex = 0;
   timeLeft = 150;
@@ -229,18 +244,22 @@ function checkAnswer(answer) {
 function chooseA() {
   checkAnswer(0);
 }
+choiceA.addEventListener("click", chooseA);
 
 function chooseB() {
   checkAnswer(1);
 }
+choiceB.addEventListener("click", chooseB);
 
 function chooseC() {
   checkAnswer(2);
 }
+choiceC.addEventListener("click", chooseC);
 
 function chooseD() {
   checkAnswer(3);
 }
+choiceD.addEventListener("click", chooseD);
 
 function gameOver() {
   summary.style.display = "block";
@@ -305,3 +324,12 @@ function showHighScores() {
     listOfHighScores.appendChild(eachNewHighScore);
   }
 }
+
+clearHighScoreBtn.addEventListener("click", function () {
+  window.localStorage.removeItem("high scores");
+  listOfHighScores.innerHTML = "High Scores Cleared!";
+  listOfHighScores.setAttribute(
+    "style",
+    "font-family: 'Archivo', sans-serif; font-style: italic;"
+  );
+});
