@@ -158,3 +158,19 @@ function checkAnswer(answer) {
     gameOver();
   }
 }
+
+function chooseA() {
+  checkAnswer(0);
+}
+
+function chooseB() {
+  checkAnswer(1);
+}
+
+function chooseC() {
+  checkAnswer(2);
+}
+
+function chooseD() {
+  checkAnswer(3);
+}
