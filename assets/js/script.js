@@ -1,7 +1,9 @@
 //List of Questions and Answers
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-console.log(choices);
+const questionCounterText = document.getElementById('questionCounter');
+const scoreText = document.getElementById('score');
+
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -60,7 +62,7 @@ var questions = [
     choice2: "Butter",
     choice3: "Asbestos",
     choice4: "Flugengroggle extract",
-    answer: 1,
+    answer: 2,
   },
   {
     question:
@@ -69,6 +71,7 @@ var questions = [
     choice2: "Because your standing on them stupid",
     choice3: "Because of the way you look at yourself in the mirror",
     choice4: "To avoid athletes forehead",
+    answer: 2
   },
   {
     question: "Whats the difference between a Crocodile and an Alligator?",
@@ -99,18 +102,18 @@ var questions = [
   },
   {
     question:
-      "What is the American Dental Associations recommended way of entering a Chipotle",
+      "What is the American Dental Association's recommended way of entering a Chipotle?",
     choice1: "Through the doggie door",
     choice2:
-      "<Wrapping yourself in bubble wrap and jumping through the window>",
+      "Wrapping yourself in bubble wrap and jumping through the window>",
     choice3: "Hide inside a bag of rice then jump out before they open it",
     choice4: "'Kramer' in",
-    answer: 2,
+    answer: 4,
   },
 ];
 
-const CORRECT_BONUS = 20;
-const MAX_QUESTIONS = 5;
+const CORRECT_BONUS = 1;
+const MAX_QUESTIONS = 10;
 
 
 
@@ -118,13 +121,19 @@ startGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questions];
-  console.log(availableQuestions);
   getNewQuestion();
 };
 
 
 getNewQuestion = () => {
+    if(availableQuestions.length ===0 || questionCounter >= MAX_QUESTIONS) {
+      localStorage.setItem('mostRecentScore', score);
+    return window.location.assign("/end.html");
+   }
   questionCounter++;
+  questionCounterText.innerText = (questionCounter + MAX_QUESTIONS);
+
+
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
@@ -134,5 +143,41 @@ getNewQuestion = () => {
     choice.innerText = currentQuestion["choice" + number];
 
   });
+
+  availableQuestions.splice(questionIndex, 1);
+
+  acceptingAnswers = true;
+
 };
+
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+
+    const classToApply = 
+      selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+   
+    if(classToApply === 'correct') {
+      incrementScore(CORRECT_BONUS);
+    }
+
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout( () => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    },  1000);
+
+  });
+})
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+}
+
 startGame();
