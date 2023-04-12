@@ -2,10 +2,12 @@ const username = document.getElementById('username');
 const savedScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+finalScore.innerText = mostRecentScore;
 
-const highScores = JSON.parse(localStorage.getItem("highScores"));
+const highScores = JSON.parse(localStorage.getItem("highScores")) ||[];
 console.log(highScores);
-console.log(JSON.parse(localStorage.getItem("highScores")));
+const MAX_HIGH_SCORES =10
+
 finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () =>{
@@ -13,8 +15,7 @@ username.addEventListener('keyup', () =>{
 
 });
 
-saveHighScore = e => {
-  console.log('clicked the save button!');
+saveHighScore = (e) => {
   e.preventDefault();
 
 
@@ -22,6 +23,13 @@ saveHighScore = e => {
     score: mostRecentScore,
     name: username.value
   };
+
+  highScores.push(score);
+
+  localStorage.setItem("highScore", JSON.stringify(highScore));
+  window.location.assign('/The-Nonsense-Quiz/')
  
 }; 
+
+console.log(highScore);
 
