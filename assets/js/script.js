@@ -174,3 +174,12 @@ function chooseC() {
 function chooseD() {
   checkAnswer(3);
 }
+
+function gameOver() {
+  summary.style.display = "block";
+  questionDiv.style.display = "none";
+  startDiv.style.display = "none";
+  timer.style.display = "none";
+  timesUp.style.display = "block";
+  finalScore.textContent = correctAns;
+}
