@@ -113,7 +113,7 @@ var questions = [
 ];
 
 const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 11;
 
 
 
