@@ -101,3 +101,28 @@ var scoreResult;
 var questionIndex = 0;
 
 
+var timeLeft = 151;
+function newQuiz() {
+    questionIndex = 0;
+    timeLeft = 150;
+    timeLeft.textContent = timeLeft;
+    initialInput.textContent = "";
+
+    startDiv.style.display = "none";
+    questionDiv.style.display = "block";
+    timer.style.display = "block";
+    timesUp.style.display = "none";
+
+    var startTimer = setInterval(function() {
+        timeLeft--;
+        timeLeft.textContent = timeLeft;
+        if(timeLeft <= 0) {
+            clearInterval(startTimer);
+            if (questionIndex < questions.length - 1) {
+                gameOver();
+            }
+        }
+    },1000);
+
+    showQuiz();
+};
