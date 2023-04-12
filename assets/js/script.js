@@ -99,15 +99,13 @@ var correctAns = 0;
 var questionNum = 0;
 var scoreResult;
 var questionIndex = 0;
-
-
 var timeLeft = 151;
+
 function newQuiz() {
     questionIndex = 0;
     timeLeft = 150;
     timeLeft.textContent = timeLeft;
     initialInput.textContent = "";
-
     startDiv.style.display = "none";
     questionDiv.style.display = "block";
     timer.style.display = "block";
@@ -123,10 +121,40 @@ function newQuiz() {
             }
         }
     },1000);
-
     showQuiz();
 };
 
 function showQuiz() {
   nextQuestion();
+}
+
+function nextQuestion() {
+  questionTitle.textContent = questions[questionIndex].question;
+  choiceA.textContent = questions[questionIndex].choice[0];
+  choiceB.textContent = questions[questionIndex].choice[1];
+  choiceC.textContent = questions[questionIndex].choice[2];
+  choiceD.textContent = questions[questionIndex].choice[3];
+}
+
+function checkAnswer(answer) {
+  var lineBreak = document.getElementById("lineBreak");
+  lineBreak.style.display = "block";
+  answerCheck.style.display = "block";
+  if (
+    questions[questionIndex].answer === questions[questionIndex].choices[answer]
+  ) {
+    correctAns++;
+    answerCheck.textContent = "Correct!";
+  } else {
+    totalTime -= 10;
+    timeLeft.textContent = totalTime;
+    answerCheck.textContent =
+      "Wrong! The correct answer is: " + questions[questionIndex].answer;
+  }
+  questionIndex++;
+  if (questionIndex < questions.length) {
+    nextQuestion();
+  } else {
+    gameOver();
+  }
 }
