@@ -1,3 +1,5 @@
+// Nonsense question
+
 const questions = [
   {
     question: "How much wood would a Woodchuck chuck if a Woodchuck could chuck wood?",
@@ -26,17 +28,17 @@ const questions = [
   },
   {
     question: "What are you actually doing when you wash your hands?",
-    choices: ["a. Break dancing","b. Cleaning your top feet","c. Supervising your hands while they commit bacterial genocide.","d. Making Soap disappear"],
-    answer: "c. Supervising your hands while they commit bacterial genocide.",
+    choices: ["a. Break dancing","b. Cleaning your top feet","c. Supervising your hands while they commit bacterial genocide","d. Making Soap disappear"],
+    answer: "c. Supervising your hands while they commit bacterial genocide",
   },
   {
     question: "When doing the Hokey Pokey, what is it all about?",
-    choices: ["a. Playing leapfrog with a stranger in a Taco Bell parking lot.","b. Lolly Gaging","c. Putting your right hand in, then out, then shaking it all about.","d. Playing Amazing Graze with your nose."],
-    answer:"c Putting your right hand in, then out, then shaking it all about.",
+    choices: ["a. Playing leapfrog with a stranger in a Taco Bell parking lot","b. Lolly Gaging","c. Putting your right hand in, then out, then shaking it all about","d. Playing Amazing Graze with your nose"],
+    answer:"c. Putting your right hand in, then out, then shaking it all about.",
   },
   {
     question: "Whats the difference between a Crocodile and an Alligator?",
-    choices: ["a. One sees you later and the other sees you after a while","b. All Crocodiles are born Crocodiles but Alligators are born lizards and turn into Alligators when they turn 15 years old","c. If you split an Alligator in half it becomes a Partigator, when you split a Crocodile in half it just dies.","d. One starts with C and the other starts with A"],
+    choices: ["a. One sees you later and the other sees you after a while","b. All Crocodiles are born Crocodiles but Alligators are born lizards and turn into Alligators when they turn 15 years old","c. If you split an Alligator in half it becomes a Partigator, when you split a Crocodile in half it just dies","d. One starts with C and the other starts with A"],
     answer: "a. One sees you later and the other sees you after a while",
   },
   {
@@ -47,7 +49,7 @@ const questions = [
   {
     question:
       "What is the most effective way to stop a fully grown Danny DeVito from charging and headbutting you?",
-    choices: ["a. You can't stop Danny DeVito","b. Jump over him","c. Throw him an oven roasted turkey leg","d. Yell, STOP as loud as you can sign language"],
+    choices: ["a. Play dead","b. Jump over him","c. Throw him an oven roasted turkey leg","d. Yell, STOP as loud as you can sign language"],
     answer: "b. Jump over him",
   },
   {
@@ -88,6 +90,7 @@ var clearHighScoreBtn = document.getElementById("clearHighScoreBtn");
 var viewHighScore = document.getElementById("viewHighScore");
 var listOfHighScores = document.getElementById("listOfHighScores");
 
+// start quiz button
 startQuizBtn.addEventListener("click", newQuiz);
 
 // Other variables defined
@@ -96,14 +99,14 @@ var questionNum = 0;
 var scoreResult;
 var questionIndex = 0;
 
+//Total time
+var totalTime = 201;
 
-var totalTime = 151;
 
-
-
+//newQuiz start fuction
 function newQuiz() {
   questionIndex = 0;
-  totalTime = 150;
+  totalTime = 200;
   timeLeft.textContent = totalTime;
   initialInput.textContent = "";
 
@@ -126,7 +129,7 @@ function newQuiz() {
   showQuiz();
 }
 
-
+//next Question function
 function showQuiz() {
   nextQuestion();
 }
@@ -139,6 +142,7 @@ function nextQuestion() {
   choiceD.textContent = questions[questionIndex].choices[3];
 }
 
+// Answer check function
 function checkAnswer(answer) {
   var lineBreak = document.getElementById("lineBreak");
   lineBreak.style.display = "block";
@@ -161,7 +165,7 @@ function checkAnswer(answer) {
       gameOver();
     }
   }
-  
+ //Choooooose an answer 
   function chooseA() {
     checkAnswer(0);
   }
@@ -178,6 +182,8 @@ function checkAnswer(answer) {
     checkAnswer(3);
   }
   
+
+  //Game over fuction
   function gameOver() {
     summary.style.display = "block";
     questionDiv.style.display = "none";
@@ -187,11 +193,13 @@ function checkAnswer(answer) {
     finalScore.textContent = correctAns;
   }
   
+
+  //High score function/initials(Lazy version of your name)
   function storeHighScores(event) {
     event.preventDefault();
     
     if (initialInput.value === "") {
-      alert("Please enter your initials!");
+      alert("Please enter the lazy version of your name!");
       return;
     }
     
@@ -214,13 +222,15 @@ function checkAnswer(answer) {
       initials: initialInput.value,
       score: finalScore.textContent,
     };
-    
+    //Value of userScore is pushed to array "scoresArray" and coverts array in a JSON string then stores array in browsers local storage with the key "high Scores"
     scoresArray.push(userScore);
     var scoresArrayString = JSON.stringify(scoresArray);
     window.localStorage.setItem("high scores", scoresArrayString);
     
     showHighScores();
   }
+
+  //highscore function defined/ retreives high score from browsers local storage and appends them as <p>
   var f = 0;
   function showHighScores() {
     startDiv.style.display = "none";
@@ -242,6 +252,8 @@ function checkAnswer(answer) {
       listOfHighScores.appendChild(eachNewHighScore);
     }
   }
+
+  //click event listeners for the choices
   choiceA.addEventListener("click", chooseA);
   choiceB.addEventListener("click", chooseB);
   choiceC.addEventListener("click", chooseC);
@@ -255,11 +267,13 @@ function checkAnswer(answer) {
     showHighScores(event);
   });
   
+  //Go back button click event listener
   goBackBtn.addEventListener("click", function () {
     startDiv.style.display = "block";
     highScoreSection.style.display = "none";
   });
   
+  //clear high score click event listener
   clearHighScoreBtn.addEventListener("click", function () {
     window.localStorage.removeItem("high scores");
     listOfHighScores.innerHTML = "High Scores Cleared!";

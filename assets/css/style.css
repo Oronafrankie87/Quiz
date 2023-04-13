@@ -1,8 +1,9 @@
 * {
   font-family: 'Righteous', cursive;
+  font-size: large;
 
 }
-
+/* buttons for the choices of the quiz */
 #btn0,
 #btn1,
 #btn2,
@@ -13,8 +14,22 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   border-radius: 15px
 }
-
+/* start button for the quiz */
 #start-quiz-button {
+  border: solid Black;
+  color: black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+/* submit button for the quiz */
+#submitBtn {
+  border: solid Black;
+  color: black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+#viewHighScore {
+  background-color: #26A2B8;
   border: solid Black;
   color: black;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
