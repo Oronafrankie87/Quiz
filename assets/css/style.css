@@ -3,3 +3,20 @@
 
 }
 
+#btn0,
+#btn1,
+#btn2,
+#btn3 {
+  background-color: #26A2B8;
+  border: solid Black;
+  color: black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px
+}
+
+#start-quiz-button {
+  border: solid Black;
+  color: black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
