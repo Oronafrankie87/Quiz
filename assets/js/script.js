@@ -34,11 +34,11 @@ const questions = [
   {
     question: "When doing the Hokey Pokey, what is it all about?",
     choices: ["a. Playing leapfrog with a stranger in a Taco Bell parking lot","b. Lolly Gaging","c. Putting your right hand in, then out, then shaking it all about","d. Playing Amazing Graze with your nose"],
-    answer:"c. Putting your right hand in, then out, then shaking it all about.",
+    answer:"c. Putting your right hand in, then out, then shaking it all about",
   },
   {
     question: "Whats the difference between a Crocodile and an Alligator?",
-    choices: ["a. One sees you later and the other sees you after a while","b. All Crocodiles are born Crocodiles but Alligators are born lizards and turn into Alligators when they turn 15 years old","c. If you split an Alligator in half it becomes a Partigator, when you split a Crocodile in half it just dies","d. One starts with C and the other starts with A"],
+    choices: ["a. One sees you later and the other sees you after a while","b. All Crocodiles are born Crocodiles but Alligators are born lizards and turn into Alligators at age 15","c. If you split an Alligator in half it becomes a Partigator, when you split a Crocodile in half it just dies","d. One starts with W and the other starts with X"],
     answer: "a. One sees you later and the other sees you after a while",
   },
   {
@@ -48,20 +48,20 @@ const questions = [
   },
   {
     question:
-      "What is the most effective way to stop a fully grown Danny DeVito from charging and headbutting you?",
-    choices: ["a. Play dead","b. Jump over him","c. Throw him an oven roasted turkey leg","d. Yell, STOP as loud as you can sign language"],
-    answer: "b. Jump over him",
+      "What is the most effective way to stop a fully grown Danny DeVito from charging at you?",
+    choices: ["a. Playing dead","b. Jumping over him","c. Throw him an oven roasted turkey leg","d. Yelling, STOP as loud as you can in sign language"],
+    answer: "b. Jumping over him",
   },
   {
     question:
       "What is the American Dental Association's recommended way of entering a Chipotle?",
-    choices: ["a. Through the doggie door","b. Wrapping yourself in bubble wrap and jumping through the window","c. Hide inside a bag of rice then jump out before they open it","d. 'Kramer' in"],
+    choices: ["a. Crawling through the doggie door","b. Wrapping yourself in bubble wrap and jumping through the window","c. Hiding inside a bag of rice then jump out before they open it","d. 'Kramer' in"],
     answer: "d. 'Kramer' in",
   },
   {
     question:
-      "Barry Gibb, the oldest and only living member of the great singing group the Bee Gees is very good at?",
-    choices: ["a. Jive Talkin'","b. Getting that night fever","c. Stayin' Alive","d. Mending a broken heart"],
+      "Barry Gibb, the oldest and only living member of the singing group the Bee Gees is very good at?",
+    choices: ["a. Jive Talkin'","b. Gettin' that night fever","c. Stayin' Alive","d. Mending a broken heart"],
     answer: "c. Stayin' Alive",
   },
 ];
