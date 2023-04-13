@@ -118,14 +118,8 @@ function newQuiz() {
   var startTimer = setInterval(function () {
     totalTime--;
     timeLeft.textContent = totalTime;
-    if (totalTime <= 0) {
-      clearInterval(startTimer);
-      if (questionIndex < questions.length - 1) {
-        gameOver();
-      }
-    }
   }, 1000);
-
+  
   showQuiz();
 }
 
@@ -165,7 +159,7 @@ function checkAnswer(answer) {
       gameOver();
     }
   }
- //Choooooose an answer 
+  //Choooooose an answer 
   function chooseA() {
     checkAnswer(0);
   }
@@ -182,7 +176,7 @@ function checkAnswer(answer) {
     checkAnswer(3);
   }
   
-
+  
   //Game over fuction
   function gameOver() {
     summary.style.display = "block";
@@ -193,7 +187,7 @@ function checkAnswer(answer) {
     finalScore.textContent = correctAns;
   }
   
-
+  
   //High score function/initials(Lazy version of your name)
   function storeHighScores(event) {
     event.preventDefault();
@@ -209,6 +203,12 @@ function checkAnswer(answer) {
     summary.style.display = "none";
     highScoreSection.style.display = "block";
     
+    if (totalTime <= 0) {
+      clearInterval(startTimer);
+      if (questionIndex < questions.length - 1) {
+        gameOver();
+      }
+    }
     var savedHighScores = localStorage.getItem("high scores");
     var scoresArray;
     
