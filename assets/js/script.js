@@ -100,13 +100,13 @@ var scoreResult;
 var questionIndex = 0;
 
 //Total time
-var totalTime = 201;
+var totalTime = 301;
 
 
 //newQuiz start fuction
 function newQuiz() {
   questionIndex = 0;
-  totalTime = 200;
+  totalTime = 300;
   timeLeft.textContent = totalTime;
   initialInput.textContent = "";
 
@@ -120,13 +120,12 @@ function newQuiz() {
     timeLeft.textContent = totalTime;
   }, 1000);
   
-  showQuiz();
+  // showQuiz();
+  nextQuestion();
 }
 
 //next Question function
-function showQuiz() {
-  nextQuestion();
-}
+
 
 function nextQuestion() {
   questionTitle.textContent = questions[questionIndex].question;
@@ -147,7 +146,10 @@ function checkAnswer(answer) {
       correctAns++;
       answerCheck.textContent = "Correct!";
     } else {
-      timeLeft -= 25;
+      // timeLeft -= 25;
+      totalTime -= 25;
+      console.log('time left', timeLeft)
+      console.log('total time', totalTime)
       timeLeft.textContent = totalTime;
       answerCheck.textContent =
       "Wrong!";
