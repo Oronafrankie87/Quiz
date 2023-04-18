@@ -118,6 +118,11 @@ function newQuiz() {
   var startTimer = setInterval(function () {
     totalTime--;
     timeLeft.textContent = totalTime;
+
+    if (totalTime === 0) {
+      clearInterval(startTimer);
+      window.location.href = "gameover.html"
+    }
   }, 1000);
   
   // showQuiz();

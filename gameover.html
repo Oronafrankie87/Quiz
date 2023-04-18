@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/gameover.css" />
+    <title>Game Over</title>
+  </head>
+  <body>
+    <h1>Game Over</h1>
+    <p>You ran out of time! Try this nonsense again...</p>
+    <div class="restart-button">
+      <button onclick="restart()">Restart</button>
+    </div>
+    <script>
+      function restart() {
+        // Redirect to the quiz start page
+        window.location.href = "./index.html";
+      }
+    </script>
+  </body>
+</html>
