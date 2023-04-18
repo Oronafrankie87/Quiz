@@ -29,6 +29,10 @@
   border-radius: 15px;
 }
 
+.custom-text-dark {
+    color: black;
+}
+
 #viewHighScore {
   background-color: #26A2B8;
   border: solid Black;
